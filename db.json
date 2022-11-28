@@ -1,0 +1,20 @@
+{
+    "dogs": [
+      {
+        "id": 1,
+        "name": "Bobby",
+        "breed": "Golden Retriever",
+        "age": 3, 
+        "image": "https://thehappypuppysite.com/wp-content/uploads/2018/09/golden-retriever-facts-1.jpg",
+        "likes": 0
+      },
+      {
+        "id": 2,
+        "name": "Suzie",
+        "breed": "Pomeranian",
+        "age": 1, 
+        "image": "https://bonnieclydeworldwide.com/wp-content/uploads/2020/03/mango2-1.jpg",
+        "likes": 0
+      }
+    ]
+  }
