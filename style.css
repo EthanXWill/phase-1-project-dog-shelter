@@ -63,7 +63,7 @@
      display: block;
      max-width: 100%;
  }
- 
+
  /* Inherit fonts for inputs and buttons */
  input,
  button,
@@ -239,6 +239,21 @@
      font-weight: normal;
      grid-area: h2block;
  }
+
+ header img {
+    height: 95px;
+    width: auto;
+ }
+
+.row {
+    display: flex;
+  }
+
+.column {
+    display: flex;
+    padding-right: 5px;
+}
+
  header .container > p {
      grid-area: maintained;
      margin: 0;
