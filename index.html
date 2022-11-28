@@ -15,7 +15,6 @@
         <h2>Here are the dogs we have available.</h2>
         <div class="row">
           <div id="dog-thumnail-list">
-            <!-- All the dog image thumbnails and names go here. -->
             <!-- <div class="column">
               <img src="https://thehappypuppysite.com/wp-content/uploads/2018/09/golden-retriever-facts-1.jpg"/>
             </div>
@@ -26,10 +25,11 @@
         </div>
       </div>
     </header>
-    <div class="container">
+    <main id="main" tabIndex="-1">
       <article>
-        <h2 id="dog-name"></h2>
-        <img id="dog-image" src=""/>
+        <div class="row">
+        <div class="col-sm-6">
+        <h2 id="dog-name">Insert Name Here</h2>
         <h3>
           Age: 
           <span id="dog-age"></span>
@@ -38,7 +38,14 @@
           Breed: 
           <span id="dog-breed"></span>
         </h3>
+      </div>
+      <div class="col-sm-6">
+        <blockquote>
+          <img id="dog-image" src="https://thehappypuppysite.com/wp-content/uploads/2018/09/golden-retriever-facts-1.jpg">
+        </blockquote>
+      </div>
+    </div>
       </article>
-    </div> 
+    </main>
   </body>
 </html>
