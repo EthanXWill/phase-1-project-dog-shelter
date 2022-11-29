@@ -422,6 +422,23 @@
     column-width: 250px;
  }
 
+ article button {
+    background-color: #557a80;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+ article #remove-button-div {
+    text-align: center;
+ }
+
+ article #remove-button-div button{
+    background-color: #e2845b;    
+ }
+
  article section blockquote strong {
      text-transform: uppercase;
  }
