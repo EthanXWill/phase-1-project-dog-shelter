@@ -15,12 +15,16 @@ let currentDog = {}
 
 function renderDogThumbnails(dogsArray) {
     dogsArray.forEach((dog) => {
-        let dogThumbnail = document.createElement("img")
-        dogThumbnail.src = dog.image
-        dogThumbnailsContainer.append(dogThumbnail)
-        dogThumbnail.addEventListener("click", () => displayDog(dog))
+        addDogThumnail(dog)
     })
     displayDog(dogsArray[0])
+}
+
+function addDogThumnail(dog) {
+    let dogThumbnail = document.createElement("img")
+    dogThumbnail.src = dog.image
+    dogThumbnailsContainer.append(dogThumbnail)
+    dogThumbnail.addEventListener("click", () => displayDog(dog))
 }
 
 function displayDog(dog) {
@@ -38,7 +42,7 @@ likeButton.addEventListener("click", (e) => {
     displayDog(currentDog)
 })
 
-document.querySelector("#new-dog").addEventListener("submit", newDogHandler)
+document.querySelector("#new-dog-form").addEventListener("submit", newDogHandler)
 
 function newDogHandler(e){
     e.preventDefault()
@@ -61,7 +65,7 @@ function addDog(newDog){
         body:JSON.stringify(newDog)
     })
     .then(res => res.json())
-    .then(dog => console.log(dog))
+    .then(dog => addDogThumnail(dog))
 }
 
     
