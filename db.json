@@ -1,0 +1,44 @@
+{
+    "dogs": [
+        {
+            "id": 1,
+            "name": "Nymeria",
+            "breed": "Australian Cattledog",
+            "age": 5,
+            "image": "https://images.dog.ceo/breeds/cattledog-australian/IMG_7057.jpg",
+            "likes": 0
+        },
+        {
+            "id": 2,
+            "name": "Sam",
+            "breed": "Labradoodle",
+            "age": 7,
+            "image": "https://images.dog.ceo/breeds/labradoodle/lola.jpg",
+            "likes": 0
+        },
+        {
+            "id": 3,
+            "name": "Luna",
+            "breed": "Mix",
+            "age": 3,
+            "image": "https://images.dog.ceo/breeds/mix/luis2.jpg",
+            "likes": 0
+        },
+        {
+            "id": 4,
+            "name": "Molly",
+            "breed": "Cockapoo",
+            "age": 12,
+            "image": "https://images.dog.ceo/breeds/cockapoo/george-bow-tie.jpg",
+            "likes": 0
+        },
+        {
+            "id": 5,
+            "name": "Felix",
+            "breed": "Fox Terrier",
+            "age": 8,
+            "image": "https://images.dog.ceo/breeds/terrier-fox/n02095314_2059.jpg",
+            "likes": 0
+        }
+    ]
+}
