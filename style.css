@@ -391,7 +391,7 @@
  article h3:after {
      content: "";
      position: absolute;
-     bottom: 0;
+     bottom: 5px;
      left: 0;
      width: 50px;
      height: 4px;
