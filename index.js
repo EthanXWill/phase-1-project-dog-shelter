@@ -31,4 +31,18 @@ dogLikes.addEventListener("click", (e) => {
     dogLikes.innerText = parseInt(dogLikes.innerText) + 1
 })
 
+document.querySelector("#new-dog").addEventListener("submit", addDog)
+
+function addDog(e){
+    e.preventDefault()
+    let newDog = {
+        name:e.target.name.value,
+        breed:e.target.breed.value,
+        age:e.target.age.value,
+        image:e.target.image.value,
+        likes:0
+    }
+    console.log(newDog)
+}
+
  
