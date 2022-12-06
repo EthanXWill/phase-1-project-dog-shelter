@@ -31,9 +31,9 @@ dogLikes.addEventListener("click", (e) => {
     dogLikes.innerText = parseInt(dogLikes.innerText) + 1
 })
 
-document.querySelector("#new-dog").addEventListener("submit", addDog)
+document.querySelector("#new-dog").addEventListener("submit", newDogHandler)
 
-function addDog(e){
+function newDogHandler(e){
     e.preventDefault()
     let newDog = {
         name:e.target.name.value,
@@ -42,7 +42,19 @@ function addDog(e){
         image:e.target.image.value,
         likes:0
     }
-    console.log(newDog)
+    addDog(newDog)
 }
 
- 
+function addDog(newDog){
+    fetch("http://localhost:3000/dogs",{
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(newDog)
+    })
+    .then(res => res.json())
+    .then(dog => console.log(dog))
+}
+
+    
