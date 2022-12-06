@@ -7,6 +7,8 @@ const dogName = document.querySelector("#dog-name")
 const dogAge = document.querySelector("#dog-age")
 const dogBreed = document.querySelector("#dog-breed")
 const dogImage = document.querySelector("#dog-image")
+const dogLikes = document.querySelector("#dog-likes")
+
 
 function renderDogThumbnails(dogsArray) {
     dogsArray.forEach((dog) => {
@@ -22,6 +24,11 @@ function displayDog(dog) {
     dogAge.innerText = dog.age
     dogBreed.innerText = dog.breed
     dogImage.src = dog.image
+    dogLikes.innerText = dog.likes
 }
+
+dogLikes.addEventListener("click", (e) => {
+    dogLikes.innerText = parseInt(dogLikes.innerText) + 1
+})
 
  
