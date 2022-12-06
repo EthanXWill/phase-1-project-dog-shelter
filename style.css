@@ -63,7 +63,7 @@
      display: block;
      max-width: 100%;
  }
- 
+
  /* Inherit fonts for inputs and buttons */
  input,
  button,
@@ -239,6 +239,21 @@
      font-weight: normal;
      grid-area: h2block;
  }
+
+ header img {
+    height: 95px;
+    width: auto;
+ }
+
+.row {
+    display: flex;
+  }
+
+.column {
+    display: flex;
+    padding-right: 5px;
+}
+
  header .container > p {
      grid-area: maintained;
      margin: 0;
@@ -388,13 +403,14 @@
  article section h3 {
      margin-top: 3rem;
  }
- article section blockquote {
+ article blockquote {
      margin: 1.5rem 0;
      padding: 0.75rem 1.5rem;
      border: solid 2px #e2845b;
      -webkit-box-shadow: 5px 5px 0 #e2845b;
              box-shadow: 5px 5px 0 #e2845b;
  }
+
  article section blockquote strong {
      text-transform: uppercase;
  }
