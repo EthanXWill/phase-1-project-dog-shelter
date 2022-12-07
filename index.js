@@ -7,6 +7,8 @@ const dogName = document.querySelector("#dog-name")
 const dogAge = document.querySelector("#dog-age")
 const dogBreed = document.querySelector("#dog-breed")
 const dogImage = document.querySelector("#dog-image")
+const dogLikes = document.querySelector("#dog-likes")
+
 
 function renderDogThumbnails(dogsArray) {
     dogsArray.forEach((dog) => {
@@ -22,6 +24,37 @@ function displayDog(dog) {
     dogAge.innerText = dog.age
     dogBreed.innerText = dog.breed
     dogImage.src = dog.image
+    dogLikes.innerText = dog.likes
 }
 
- 
+dogLikes.addEventListener("click", (e) => {
+    dogLikes.innerText = parseInt(dogLikes.innerText) + 1
+})
+
+document.querySelector("#new-dog").addEventListener("submit", newDogHandler)
+
+function newDogHandler(e){
+    e.preventDefault()
+    let newDog = {
+        name:e.target.name.value,
+        breed:e.target.breed.value,
+        age:e.target.age.value,
+        image:e.target.image.value,
+        likes:0
+    }
+    addDog(newDog)
+}
+
+function addDog(newDog){
+    fetch("http://localhost:3000/dogs",{
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(newDog)
+    })
+    .then(res => res.json())
+    .then(dog => console.log(dog))
+}
+
+    
