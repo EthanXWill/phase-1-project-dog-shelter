@@ -242,6 +242,7 @@
 
  header img {
     height: 95px;
+    padding-right: 7px;
     width: auto;
  }
 
@@ -409,6 +410,16 @@
      border: solid 2px #e2845b;
      -webkit-box-shadow: 5px 5px 0 #e2845b;
              box-shadow: 5px 5px 0 #e2845b;
+ }
+
+ article img {
+    height: 325px;
+    width: auto;
+ }
+
+ article .col-sm-4 {
+    padding-right: 30px;
+    column-width: 250px;
  }
 
  article section blockquote strong {
