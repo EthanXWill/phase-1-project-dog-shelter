@@ -39,14 +39,6 @@
       "age": 8,
       "image": "https://images.dog.ceo/breeds/terrier-fox/n02095314_2059.jpg",
       "likes": 0
-    },
-    {
-      "name": "",
-      "breed": "",
-      "age": "",
-      "image": "",
-      "likes": 0,
-      "id": 6
     }
   ]
 }
