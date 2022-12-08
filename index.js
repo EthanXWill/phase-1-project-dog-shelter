@@ -8,15 +8,23 @@ const dogAge = document.querySelector("#dog-age")
 const dogBreed = document.querySelector("#dog-breed")
 const dogImage = document.querySelector("#dog-image")
 const dogLikes = document.querySelector("#dog-likes")
+const likeButton = document.querySelector("#like-button")
+
+let currentDog = {}
 
 
 function renderDogThumbnails(dogsArray) {
     dogsArray.forEach((dog) => {
-        let dogThumbnail = document.createElement("img")
-        dogThumbnail.src = dog.image
-        dogThumbnailsContainer.append(dogThumbnail)
-        dogThumbnail.addEventListener("click", () => displayDog(dog))
+        addDogThumnail(dog)
     })
+    displayDog(dogsArray[0])
+}
+
+function addDogThumnail(dog) {
+    let dogThumbnail = document.createElement("img")
+    dogThumbnail.src = dog.image
+    dogThumbnailsContainer.append(dogThumbnail)
+    dogThumbnail.addEventListener("click", () => displayDog(dog))
 }
 
 function displayDog(dog) {
@@ -25,13 +33,16 @@ function displayDog(dog) {
     dogBreed.innerText = dog.breed
     dogImage.src = dog.image
     dogLikes.innerText = dog.likes
+
+    currentDog = dog
 }
 
-dogLikes.addEventListener("click", (e) => {
-    dogLikes.innerText = parseInt(dogLikes.innerText) + 1
+likeButton.addEventListener("click", (e) => {
+    currentDog.likes = parseInt(dogLikes.innerText) + 1
+    displayDog(currentDog)
 })
 
-document.querySelector("#new-dog").addEventListener("submit", newDogHandler)
+document.querySelector("#new-dog-form").addEventListener("submit", newDogHandler)
 
 function newDogHandler(e){
     e.preventDefault()
@@ -54,7 +65,7 @@ function addDog(newDog){
         body:JSON.stringify(newDog)
     })
     .then(res => res.json())
-    .then(dog => console.log(dog))
+    .then(dog => addDogThumnail(dog))
 }
 
     
